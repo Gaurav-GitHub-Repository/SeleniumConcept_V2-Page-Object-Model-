@@ -36,7 +36,7 @@ public class browserconfig {
 			driver.get(URL);
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		}
-		if(browser.equalsIgnoreCase("MozillaFirefox"))
+		else if(browser.equalsIgnoreCase("MozillaFirefox"))
 		{
 			FirefoxOptions option = new FirefoxOptions();
 			System.setProperty("webdriver.gecko.driver", "C:\\Eclipse-Selenium 13-07-2024\\eclipse-java\\Selenium_Concept\\drivers\\geckodriver.exe");
@@ -46,7 +46,7 @@ public class browserconfig {
 			driver.get(URL);
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		}
-		if(browser.equalsIgnoreCase("MicrosoftEdge"))
+		else if(browser.equalsIgnoreCase("MicrosoftEdge"))
 		{
 			System.setProperty("webdriver.edge.driver", "C:\\Eclipse-Selenium 13-07-2024\\eclipse-java\\Selenium_Concept\\drivers\\msedgedriver.exe");
 			//option.addArguments("--setHeadless");
