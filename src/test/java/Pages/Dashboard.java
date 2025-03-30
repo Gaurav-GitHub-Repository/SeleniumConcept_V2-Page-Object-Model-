@@ -147,6 +147,21 @@ public class Dashboard {
 		driver.findElement(Address).clear();
 		driver.findElement(Address).sendKeys(value);
 	}
+	// Verify radio button
+	public void verifyRadioButton()
+	{
+	    boolean radio_button1 = driver.findElement(By.xpath("//label[text()='Male']")).isDisplayed();
+	    boolean radio_button2 = driver.findElement(By.xpath("//label[text()='Female']")).isDisplayed();	
+	    List<WebElement> TotalRadioButton = driver.findElements(By.xpath("//label[text()='Gender:']/parent::*/div/label"));	
+	    for(int i=1; i<=TotalRadioButton.size();i++)
+	    {
+		if(radio_button1==true && radio_button2==true)
+		{
+		   driver.findElement(By.xpath("//label[text()='Gender:']/parent::*/div["+i+"]/label")).click();	
+		   break;	
+		}
+	    }
+	}
 	public void setGender1()
 	{
 		boolean button1 = Gender1.isDisplayed();
