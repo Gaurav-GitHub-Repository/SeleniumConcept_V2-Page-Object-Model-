@@ -157,8 +157,7 @@ public class Dashboard {
 	    {
 		if(radio_button1==true && radio_button2==true)
 		{
-		   driver.findElement(By.xpath("//label[text()='Gender:']/parent::*/div["+i+"]/label")).click();	
-		   break;	
+		   driver.findElement(By.xpath("//label[text()='Gender:']/parent::*/div["+i+"]/label")).click();		
 		}
 	    }
 	}
